@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1573473911340,
+  "timestamp": 1573478150991,
   "index": "/torneoacg/index.html",
   "assetGroups": [
     {
@@ -58,7 +58,7 @@
     "/torneoacg/index.html": "c93d888f85118b3915a7ec6273f8edf4c74dd602",
     "/torneoacg/main-es2015.b1e3bdc9550b3596847f.js": "51aa4afd7f53fb41b14b022cd3c5eb80e5b9cf50",
     "/torneoacg/main-es5.b1e3bdc9550b3596847f.js": "ce25cb7d36cd2c687c6ce3f3f2a8577a8d872964",
-    "/torneoacg/manifest.webmanifest": "786b9bc68754678d77033857e6ad5816e506e907",
+    "/torneoacg/manifest.webmanifest": "770f8eb521bc217399cd1d3252a66b7d28a2e140",
     "/torneoacg/polyfills-es2015.2987770fde9daa1d8a2e.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
     "/torneoacg/polyfills-es5.df1101cc1e7b588877f8.js": "c1b326602e7b72c79de60cd3c2fd8f60a97bf078",
     "/torneoacg/runtime-es2015.edb2fcf2778e7bf1d426.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
