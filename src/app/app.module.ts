@@ -5,6 +5,11 @@ import { AppComponent } from './app.component';
 
 // material objects
 import {MaterialModule} from './material-module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FlexLayoutModule} from '@angular/flex-layout';
+
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -12,7 +17,10 @@ import {MaterialModule} from './material-module';
   ],
   imports: [
     MaterialModule,
-    BrowserModule
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    BrowserModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
