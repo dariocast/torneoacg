@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+// material objects
+import {MaterialModule} from './material-module';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    MaterialModule,
     BrowserModule
   ],
   providers: [],

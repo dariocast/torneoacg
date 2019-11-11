@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/candy-app-theme.scss",
               "src/styles.css"
             ],
             "scripts": [],
