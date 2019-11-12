@@ -24,7 +24,7 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/assets/candy-app-theme.scss",
+              "src/assets/torneo-theme.scss",
               "src/styles.css"
             ],
             "scripts": [],
