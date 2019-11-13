@@ -1,11 +1,36 @@
 <mat-tab-group>
   <mat-tab label="Maschile">
-    <h1 class="mat-display-2">Girone A</h1>
-    <h1 class="mat-display-2">Girone B</h1>
-    <h1 class="mat-display-2">Girone C</h1>
+    <h1 class="mat-h1">Girone A</h1>
+    <div *ngFor="let squadra of squadre | async">
+      <span *ngIf="squadra.girone == 'a'">
+        {{squadra.nome}}
+      </span>
+    </div>
+    <h1 class="mat-h1">Girone B</h1>
+    <div *ngFor="let squadra of squadre | async">
+      <span *ngIf="squadra.girone == 'b'">
+        {{squadra.nome}}
+      </span>
+    </div>
+    <h1 class="mat-h1">Girone C</h1>
+    <div *ngFor="let squadra of squadre | async">
+      <span *ngIf="squadra.girone == 'c'">
+        {{squadra.nome}}
+      </span>
+    </div>
   </mat-tab>
   <mat-tab label="Femminile">
-    <h1 class="mat-display-2">Girone A</h1>
-    <h1 class="mat-display-2">Girone B</h1>
+    <h1 class="mat-h1">Girone A</h1>
+    <div *ngFor="let squadra of squadre | async">
+      <span *ngIf="squadra.girone == 'af'">
+        {{squadra.nome}}
+      </span>
+    </div>
+    <h1 class="mat-h1">Girone B</h1>
+    <div *ngFor="let squadra of squadre | async">
+      <span *ngIf="squadra.girone == 'bf'">
+        {{squadra.nome}}
+      </span>
+    </div>
   </mat-tab>
 </mat-tab-group>
