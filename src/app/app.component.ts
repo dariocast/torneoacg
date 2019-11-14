@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Torneo ACG';
   navLinks = [
-    { label: 'Calendario', path: '/calendario' },
+    { label: 'Partite', path: '/calendario' },
+    { label: 'Notizie', path: '/notizie' },
     { label: 'Classifica', path: '/classifica' },
+    { label: 'Statistiche', path: '/statistiche' },
     { label: 'Squadre', path: '/squadre' }
   ];
 }

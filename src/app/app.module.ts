@@ -24,6 +24,8 @@ import { LiveComponent } from './live/live.component';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { DettaglioSqaudraComponent } from './dettaglio-sqaudra/dettaglio-sqaudra.component';
 import { SquadreComponent } from './squadre/squadre.component';
+import { StatisticheComponent } from './statistiche/statistiche.component';
+import { NotizieComponent } from './notizie/notizie.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: UserProfileComponent },
@@ -33,6 +35,8 @@ const appRoutes: Routes = [
   { path: 'classifica', component: ClassificaComponent },
   { path: 'dettaglio-squadra', component: DettaglioSqaudraComponent },
   { path: 'calendario', component: CalendarioComponent },
+  { path: 'notizie', component: NotizieComponent },
+  { path: 'statistiche', component: StatisticheComponent },
   { path: 'squadre', component: SquadreComponent }
 
 ];
@@ -46,7 +50,9 @@ const appRoutes: Routes = [
     LiveComponent,
     CalendarioComponent,
     DettaglioSqaudraComponent,
-    SquadreComponent
+    SquadreComponent,
+    StatisticheComponent,
+    NotizieComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
