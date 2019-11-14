@@ -1,11 +1,13 @@
 <mat-toolbar color="primary" class="mat-elevation-z1">
-    <span [routerLink]="['']">Torneo ACG</span>
+  <button mat-button [routerLink]="['']">
+    <img alt="Home" height="40" src="../assets/logo_bianco.png" title="Home" ></button>
+    <span>Torneo ACG</span>
   <span style="flex: 1 1 auto;"></span>
   <button mat-icon-button [routerLink]="['/login']" >
     <mat-icon aria-hidden="false" aria-label="Login">exit_to_app</mat-icon>
   </button>
 </mat-toolbar>
-<nav mat-tab-nav-bar>
+<nav backgroundColor="primary" mat-tab-nav-bar mat-stretch-tabs>
   <a mat-tab-link
      *ngFor="let link of navLinks"
      [routerLink]="link.path"

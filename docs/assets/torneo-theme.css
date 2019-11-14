@@ -1,6 +1,6 @@
 /*
 Error: File to import not found or unreadable: ~@angular/material/theming.
-        on line 1 of candy-app-theme.scss
+        on line 1 of torneo-theme.scss
 
 1: @import '~@angular/material/theming';
 2: // Plus imports for other components in your app.
@@ -10,7 +10,7 @@ Error: File to import not found or unreadable: ~@angular/material/theming.
 6: // Be sure that you only ever include this mixin once!
 
 Backtrace:
-candy-app-theme.scss:1
+torneo-theme.scss:1
 /Users/dariocastellano/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /Users/dariocastellano/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/import_node.rb:44:in `import'
 /Users/dariocastellano/.rvm/gems/ruby-2.6.3/gems/sass-3.7.4/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -50,4 +50,4 @@ candy-app-theme.scss:1
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ~@angular/material/theming.\A         on line 1 of candy-app-theme.scss\A \A 1: @import '~@angular/material/theming';\A 2: // Plus imports for other components in your app.\A 3: \A 4: // Include the common styles for Angular Material. We include this here so that you only\A 5: // have to load a single css file for Angular Material in your app.\A 6: // Be sure that you only ever include this mixin once!"; }
+  content: "Error: File to import not found or unreadable: ~@angular/material/theming.\A         on line 1 of torneo-theme.scss\A \A 1: @import '~@angular/material/theming';\A 2: // Plus imports for other components in your app.\A 3: \A 4: // Include the common styles for Angular Material. We include this here so that you only\A 5: // have to load a single css file for Angular Material in your app.\A 6: // Be sure that you only ever include this mixin once!"; }
