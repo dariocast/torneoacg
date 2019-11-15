@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1573813037386,
+  "timestamp": 1573835154129,
   "index": "/torneoacg/index.html",
   "assetGroups": [
     {
@@ -10,14 +10,14 @@
       "urls": [
         "/torneoacg/favicon.ico",
         "/torneoacg/index.html",
-        "/torneoacg/main-es2015.3665039ca227943c600c.js",
-        "/torneoacg/main-es5.3665039ca227943c600c.js",
+        "/torneoacg/main-es2015.94dc2b0f4a39a6525edf.js",
+        "/torneoacg/main-es5.94dc2b0f4a39a6525edf.js",
         "/torneoacg/manifest.webmanifest",
         "/torneoacg/polyfills-es2015.2987770fde9daa1d8a2e.js",
         "/torneoacg/polyfills-es5.df1101cc1e7b588877f8.js",
         "/torneoacg/runtime-es2015.edb2fcf2778e7bf1d426.js",
         "/torneoacg/runtime-es5.edb2fcf2778e7bf1d426.js",
-        "/torneoacg/styles.b602f8d1ae0ffc30669d.css"
+        "/torneoacg/styles.2f9395366009ee7c7f25.css"
       ],
       "patterns": []
     },
@@ -117,15 +117,15 @@
     "/torneoacg/assets/torneo-theme.scss": "3b721e1130724f8a9e360ef8036f903ea36b16eb",
     "/torneoacg/assets/win.svg": "7f34eb87e3f2b2a1e6fca7aa53a4fbad9a44aa36",
     "/torneoacg/favicon.ico": "7ceb896641d53c4ba195baf9075ae88e07fbbd4d",
-    "/torneoacg/index.html": "67d80df4028024eefb12268b0fe760ab59913741",
-    "/torneoacg/main-es2015.3665039ca227943c600c.js": "b86d6fa4f1494f0cd2f718e3d5a33e1e2ba54ed3",
-    "/torneoacg/main-es5.3665039ca227943c600c.js": "82434ba0032668f8b20f854d69fa12cfe48e4ae6",
+    "/torneoacg/index.html": "8bd65320b98466ec27f5feb1aae1a4f6118ef1a0",
+    "/torneoacg/main-es2015.94dc2b0f4a39a6525edf.js": "cbbdde42f9478f6ced42b63ccf04b120ee1947e3",
+    "/torneoacg/main-es5.94dc2b0f4a39a6525edf.js": "f61ab7cd6b0291060fc91447e13140d1661a7c09",
     "/torneoacg/manifest.webmanifest": "de227435d323ab8b38ae088e88466bb8b7de0d51",
     "/torneoacg/polyfills-es2015.2987770fde9daa1d8a2e.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
     "/torneoacg/polyfills-es5.df1101cc1e7b588877f8.js": "c1b326602e7b72c79de60cd3c2fd8f60a97bf078",
     "/torneoacg/runtime-es2015.edb2fcf2778e7bf1d426.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/torneoacg/runtime-es5.edb2fcf2778e7bf1d426.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/torneoacg/styles.b602f8d1ae0ffc30669d.css": "a3d0745034b4e83bf1fee1551b4a386890a72e05"
+    "/torneoacg/styles.2f9395366009ee7c7f25.css": "c57ef7db6dfbbef13658e153ba6a654d9fe0ff96"
   },
   "navigationUrls": [
     {
