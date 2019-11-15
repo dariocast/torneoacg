@@ -1,18 +1,21 @@
-<mat-grid-list cols="3" rowHeight="50px" *ngFor="let partita of partite">
+<mat-grid-list cols="12" rowHeight="50px" *ngFor="let partita of partite">
   <mat-grid-tile>
     <img style="height: 30px;" src="{{partita.squadra1.logo}}" alt="{{partita.squadra1.nome}}">
   </mat-grid-tile>
-  <mat-grid-tile>
-    <h1 class="mat-h2"> {{partita.squadra1.nome}}</h1>
+  <mat-grid-tile [colspan]="10">
+    <div class="text-inside-grid"><h1 class="mat-h2"> {{partita.squadra1.nome}}</h1></div>
   </mat-grid-tile>
   <mat-grid-tile [rowspan]="2">
-    {{partita.data}}
+    <h1 class="mat-caption">{{partita.data}}</h1>
   </mat-grid-tile>
   <mat-grid-tile>
     <img style="height: 30px;" src="{{partita.squadra2.logo}}" alt="{{partita.squadra2.nome}}">
   </mat-grid-tile>
-  <mat-grid-tile>
-    <h1 class="mat-h2"> {{partita.squadra2.nome}}</h1>
+  <mat-grid-tile [colspan]="10">
+    <div class="text-inside-grid"><h1 class="mat-h2"> {{partita.squadra2.nome}}</h1></div>
   </mat-grid-tile>
   <mat-divider></mat-divider>
 </mat-grid-list>
+<div *ngIf="user$ | async" style="z-index:5; position : fixed;display : flex; align-self : flex-end;bottom : 10%; margin-bottom : 68px;right: 10%;">
+  <a mat-mini-fab style="margin-right : 14px;"><mat-icon>add</mat-icon></a>
+</div>

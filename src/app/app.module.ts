@@ -29,7 +29,7 @@ import { NotizieComponent } from './notizie/notizie.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: UserProfileComponent },
-  { path: '', component: DashboardComponent },
+  { path: '', component: CalendarioComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'live', component: LiveComponent },
   { path: 'classifica', component: ClassificaComponent },

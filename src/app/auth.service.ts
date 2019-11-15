@@ -8,6 +8,7 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import {User} from './models/user.model';
+import {MatSnackBar} from '@angular/material';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -17,7 +18,8 @@ export class AuthService {
   constructor(
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore,
-    private router: Router
+    private router: Router,
+    private snackBar: MatSnackBar
   ) {
     // Get the auth state, then fetch the Firestore user document or return null
     this.user$ = this.afAuth.authState.pipe(
@@ -47,8 +49,11 @@ export class AuthService {
       .subscribe((docSnapshot) => {
         if (docSnapshot.exists) {
           console.log('User exist. Will return ' + docSnapshot.data());
+          const userData = docSnapshot.data;
           return docSnapshot.data;
         } else {
+          this.openSnackBar('Utente non abilitato!', 'Ok');
+          return this.signOut();
           const data = {
             uid: user.uid,
             email: user.email,
@@ -59,6 +64,12 @@ export class AuthService {
           return userRef.set(data, { merge: true });
         }
       });
+  }
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 5000,
+    });
   }
 
   async signOut() {
