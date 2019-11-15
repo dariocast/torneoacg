@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'torneoacg-angular';
+  title = 'Torneo ACG';
+  navLinks = [
+    { label: 'Partite', path: '/calendario' },
+    { label: 'Notizie', path: '/notizie' },
+    { label: 'Classifica', path: '/classifica' },
+    { label: 'Statistiche', path: '/statistiche' },
+    { label: 'Squadre', path: '/squadre' }
+  ];
 }
