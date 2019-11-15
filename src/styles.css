@@ -4,3 +4,12 @@
 body {
   margin: 0;
 }
+
+.box.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  padding: .5rem;
+}
