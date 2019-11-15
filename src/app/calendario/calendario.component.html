@@ -1,1 +1,18 @@
-<p>calendario works!</p>
+<mat-grid-list cols="3" rowHeight="50px" *ngFor="let partita of partite">
+  <mat-grid-tile>
+    <img style="height: 30px;" src="{{partita.squadra1.logo}}" alt="{{partita.squadra1.nome}}">
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <h1 class="mat-h2"> {{partita.squadra1.nome}}</h1>
+  </mat-grid-tile>
+  <mat-grid-tile [rowspan]="2">
+    {{partita.data}}
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <img style="height: 30px;" src="{{partita.squadra2.logo}}" alt="{{partita.squadra2.nome}}">
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <h1 class="mat-h2"> {{partita.squadra2.nome}}</h1>
+  </mat-grid-tile>
+  <mat-divider></mat-divider>
+</mat-grid-list>
