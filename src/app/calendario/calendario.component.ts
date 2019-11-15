@@ -4,6 +4,8 @@ import {Squadra} from '../models/squadra.model';
 import {Partita} from '../models/partita.model';
 import {Observable} from 'rxjs';
 import * as firebase from 'firebase';
+import {AngularFireAuth} from '@angular/fire/auth';
+import {User} from 'firebase';
 
 @Component({
   selector: 'app-calendario',
@@ -11,31 +13,33 @@ import * as firebase from 'firebase';
   styleUrls: ['./calendario.component.css']
 })
 export class CalendarioComponent implements OnInit {
-  partiteRef: Observable<Partita[]>;
+  partiteArray: Observable<Partita[]>;
   partite = [];
-  constructor(private afs: AngularFirestore) {
-    this.partiteRef = this.afs.collection<Partita>('partite', ref =>
+  user$: Observable<User>;
+
+  constructor(private afs: AngularFirestore, private afAuth: AngularFireAuth) {
+    this.user$ = afAuth.authState;
+    this.partiteArray = this.afs.collection<Partita>('partite', ref =>
       ref.orderBy('data', 'asc')).valueChanges();
-    this.partiteRef.subscribe(ref => {
-      console.log(ref);
+    this.partiteArray.subscribe(ref => {
       ref.forEach(partita => {
-        let squadraUno = {};
-        this.afs.doc<Squadra>('squadre/' + partita.squadra1).get().subscribe(first => {
-          squadraUno = first.data();
-          let squadraDue = {};
-          this.afs.doc<Squadra>('squadre/' + partita.squadra2).get().subscribe(second => {
-            squadraDue = second.data();
+        this.afs.doc<Squadra>('squadre/' + partita.squadra1).valueChanges().subscribe(first => {
+          this.afs.doc<Squadra>('squadre/' + partita.squadra2).valueChanges().subscribe(second => {
             const quando = partita.data.toDate();
-            this.partite.push({
+            const singolaPartita = {
               ammoniti: partita.ammoniti,
               data: quando.getDate() + '/' + (quando.getMonth() + 1) + '\n' + quando.getHours() + ':' + quando.getMinutes(),
+              timestamp: partita.data.seconds,
               espulsi: partita.espulsi,
               golCasa: partita.golCasa,
               golTrasferta: partita.golTrasferta,
               marcatori: partita.marcatori,
-              squadra1: squadraUno,
-              squadra2: squadraDue
-            });
+              squadra1: first,
+              squadra2: second
+            };
+            this.partite.push(singolaPartita);
+            this.partite.sort((a, b) => a.timestamp < b.timestamp ? -1 : a.timestamp > b.timestamp ? 1 : 0);
+
           });
         });
       });
