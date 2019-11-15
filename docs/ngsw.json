@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1573811271910,
+  "timestamp": 1573813037386,
   "index": "/torneoacg/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "/torneoacg/favicon.ico",
         "/torneoacg/index.html",
-        "/torneoacg/main-es2015.3c1560d1b77872697efe.js",
-        "/torneoacg/main-es5.3c1560d1b77872697efe.js",
+        "/torneoacg/main-es2015.3665039ca227943c600c.js",
+        "/torneoacg/main-es5.3665039ca227943c600c.js",
         "/torneoacg/manifest.webmanifest",
         "/torneoacg/polyfills-es2015.2987770fde9daa1d8a2e.js",
         "/torneoacg/polyfills-es5.df1101cc1e7b588877f8.js",
@@ -117,10 +117,10 @@
     "/torneoacg/assets/torneo-theme.scss": "3b721e1130724f8a9e360ef8036f903ea36b16eb",
     "/torneoacg/assets/win.svg": "7f34eb87e3f2b2a1e6fca7aa53a4fbad9a44aa36",
     "/torneoacg/favicon.ico": "7ceb896641d53c4ba195baf9075ae88e07fbbd4d",
-    "/torneoacg/index.html": "95209f43c70221a9cc3403cd0ba910f40cd32159",
-    "/torneoacg/main-es2015.3c1560d1b77872697efe.js": "296ab279d9640c6abd49cf096eebfd1d2c1819ed",
-    "/torneoacg/main-es5.3c1560d1b77872697efe.js": "c05e51ab88e3bd9900cc246d76657d322689f51a",
-    "/torneoacg/manifest.webmanifest": "5d1dd11971fd419fd5d6efa42f9f73a716978bd6",
+    "/torneoacg/index.html": "67d80df4028024eefb12268b0fe760ab59913741",
+    "/torneoacg/main-es2015.3665039ca227943c600c.js": "b86d6fa4f1494f0cd2f718e3d5a33e1e2ba54ed3",
+    "/torneoacg/main-es5.3665039ca227943c600c.js": "82434ba0032668f8b20f854d69fa12cfe48e4ae6",
+    "/torneoacg/manifest.webmanifest": "de227435d323ab8b38ae088e88466bb8b7de0d51",
     "/torneoacg/polyfills-es2015.2987770fde9daa1d8a2e.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
     "/torneoacg/polyfills-es5.df1101cc1e7b588877f8.js": "c1b326602e7b72c79de60cd3c2fd8f60a97bf078",
     "/torneoacg/runtime-es2015.edb2fcf2778e7bf1d426.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
