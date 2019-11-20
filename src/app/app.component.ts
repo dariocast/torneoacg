@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AuthService} from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,11 @@ export class AppComponent {
     { label: 'Notizie', path: '/notizie' },
     { label: 'Classifica', path: '/classifica' },
     { label: 'Statistiche', path: '/statistiche' },
-    { label: 'Squadre', path: '/squadre' }
+    { label: 'Squadre', path: '/squadre' },
+    { label: 'Gioca al Fanta!', path: '/dashboard' }
   ];
+
+  constructor(public auth: AuthService) {
+
+  }
 }

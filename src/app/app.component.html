@@ -3,9 +3,24 @@
     <img alt="Home" height="40" src="assets/logo_bianco.png" title="Home" ></button>
     <span>Torneo ACG</span>
   <span style="flex: 1 1 auto;"></span>
-  <button mat-icon-button [routerLink]="['/login']" >
-    <mat-icon aria-hidden="false" aria-label="Login">exit_to_app</mat-icon>
-  </button>
+
+  <div *ngIf="auth.user$ | async; then authenticated else guest">
+  </div>
+  <!-- User NOT logged in -->
+  <ng-template #guest>
+    <button mat-icon-button (click)="auth.googleSignin()" >
+      <mat-icon aria-hidden="false" aria-label="Login">exit_to_app</mat-icon>
+    </button>
+  </ng-template>
+  <!-- User logged in -->
+  <ng-template #authenticated>
+    <div *ngIf="auth.user$ | async as user">
+      <img class="avatar" [src]="user.photoURL" alt="photo">
+      <button class="mat-button" (click)="auth.signOut()">Logout</button>
+    </div>
+  </ng-template>
+
+
 </mat-toolbar>
 <nav backgroundColor="primary" mat-tab-nav-bar mat-align-tabs="center">
   <a mat-tab-link

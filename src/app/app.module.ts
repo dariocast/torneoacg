@@ -26,11 +26,12 @@ import { DettaglioSqaudraComponent } from './dettaglio-sqaudra/dettaglio-sqaudra
 import { SquadreComponent } from './squadre/squadre.component';
 import { StatisticheComponent } from './statistiche/statistiche.component';
 import { NotizieComponent } from './notizie/notizie.component';
+import {AuthGuard} from './auth.guard';
 
 const appRoutes: Routes = [
   { path: 'login', component: UserProfileComponent },
   { path: '', component: CalendarioComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'fanta', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'live', component: LiveComponent },
   { path: 'classifica', component: ClassificaComponent },
   { path: 'dettaglio-squadra', component: DettaglioSqaudraComponent },

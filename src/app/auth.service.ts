@@ -52,7 +52,7 @@ export class AuthService {
           const userData = docSnapshot.data;
           return docSnapshot.data;
         } else {
-          this.openSnackBar('Utente non abilitato!', 'Ok');
+          this.openSnackBar('Utente non abilitato!', 'OK');
           return this.signOut();
           const data = {
             uid: user.uid,
