@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Squadra} from '../models/squadra.model';
+import {Squadra} from '../models/squadra';
 import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from '@angular/fire/firestore';
 import {Observable} from 'rxjs';
 

@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
-import {Squadra} from '../models/squadra.model';
-import {Partita} from '../models/partita.model';
+import {Squadra} from '../models/squadra';
+import {Partita} from '../models/partita';
 import {Observable} from 'rxjs';
 import * as firebase from 'firebase';
-import {AngularFireAuth} from '@angular/fire/auth';
-import {User} from 'firebase';
+import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-calendario',
@@ -15,10 +14,8 @@ import {User} from 'firebase';
 export class CalendarioComponent implements OnInit {
   partiteArray: Observable<Partita[]>;
   partite = [];
-  user$: Observable<User>;
 
-  constructor(private afs: AngularFirestore, private afAuth: AngularFireAuth) {
-    this.user$ = afAuth.authState;
+  constructor(private afs: AngularFirestore, public auth: AuthService) {
     this.partiteArray = this.afs.collection<Partita>('partite', ref =>
       ref.orderBy('data', 'asc')).valueChanges();
     this.partiteArray.subscribe(ref => {

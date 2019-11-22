@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -22,18 +23,20 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClassificaComponent } from './classifica/classifica.component';
 import { LiveComponent } from './live/live.component';
 import { CalendarioComponent } from './calendario/calendario.component';
-import { DettaglioSqaudraComponent } from './dettaglio-sqaudra/dettaglio-sqaudra.component';
+import { DettaglioSquadraComponent } from './dettaglio-squadra/dettaglio-squadra.component';
 import { SquadreComponent } from './squadre/squadre.component';
 import { StatisticheComponent } from './statistiche/statistiche.component';
 import { NotizieComponent } from './notizie/notizie.component';
+import {AuthGuard} from './auth.guard';
+import {FormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'login', component: UserProfileComponent },
   { path: '', component: CalendarioComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'live', component: LiveComponent },
   { path: 'classifica', component: ClassificaComponent },
-  { path: 'dettaglio-squadra', component: DettaglioSqaudraComponent },
+  { path: 'dettaglio-squadra', component: DettaglioSquadraComponent },
   { path: 'calendario', component: CalendarioComponent },
   { path: 'notizie', component: NotizieComponent },
   { path: 'statistiche', component: StatisticheComponent },
@@ -49,7 +52,7 @@ const appRoutes: Routes = [
     ClassificaComponent,
     LiveComponent,
     CalendarioComponent,
-    DettaglioSqaudraComponent,
+    DettaglioSquadraComponent,
     SquadreComponent,
     StatisticheComponent,
     NotizieComponent
@@ -63,7 +66,9 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     FlexLayoutModule,
     BrowserModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

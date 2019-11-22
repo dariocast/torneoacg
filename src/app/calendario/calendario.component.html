@@ -2,8 +2,11 @@
   <mat-grid-tile>
     <img style="height: 30px;" src="{{partita.squadra1.logo}}" alt="{{partita.squadra1.nome}}">
   </mat-grid-tile>
-  <mat-grid-tile [colspan]="10">
+  <mat-grid-tile [colspan]="9">
     <div class="text-inside-grid"><h1 class="mat-h2"> {{partita.squadra1.nome}}</h1></div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="text-inside-grid"><h1 class="mat-h2"> {{partita.golCasa}}</h1></div>
   </mat-grid-tile>
   <mat-grid-tile [rowspan]="2">
     <h1 class="mat-caption">{{partita.data}}</h1>
@@ -11,11 +14,14 @@
   <mat-grid-tile>
     <img style="height: 30px;" src="{{partita.squadra2.logo}}" alt="{{partita.squadra2.nome}}">
   </mat-grid-tile>
-  <mat-grid-tile [colspan]="10">
+  <mat-grid-tile [colspan]="9">
     <div class="text-inside-grid"><h1 class="mat-h2"> {{partita.squadra2.nome}}</h1></div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="text-inside-grid"><h1 class="mat-h2"> {{partita.golTrasferta}}</h1></div>
   </mat-grid-tile>
   <mat-divider></mat-divider>
 </mat-grid-list>
-<div *ngIf="user$ | async" style="z-index:5; position : fixed;display : flex; align-self : flex-end;bottom : 10%; margin-bottom : 68px;right: 10%;">
-  <a mat-mini-fab style="margin-right : 14px;"><mat-icon>add</mat-icon></a>
+<div *ngIf="auth.user$ | async as user" style="z-index:5; position : fixed;display : flex; align-self : flex-end;bottom : 10%; margin-bottom : 68px;right: 10%;">
+  <a *ngIf="user.isAdmin" mat-mini-fab style="margin-right : 14px;"><mat-icon>add</mat-icon></a>
 </div>
