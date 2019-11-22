@@ -99,7 +99,8 @@
     </ng-template>
   </mat-tab>
   <mat-tab label="Quotazioni">
-      <table mat-table [dataSource]="dataSource" class="mat-elevation-z6" matSort (matSortChange)="sortData($event)">
+<!--      <table mat-table [dataSource]="dataSource" class="mat-elevation-z6" matSort (matSortChange)="sortData($event)">-->
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z6" matSort>
         <ng-container matColumnDef="nome">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
           <td mat-cell *matCellDef="let giocatore"> {{giocatore.nome}} </td>

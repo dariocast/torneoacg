@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1573858963885,
+  "timestamp": 1574419281877,
   "index": "/torneoacg/index.html",
   "assetGroups": [
     {
@@ -10,14 +10,14 @@
       "urls": [
         "/torneoacg/favicon.ico",
         "/torneoacg/index.html",
-        "/torneoacg/main-es2015.605a44081c3211fa9aa3.js",
-        "/torneoacg/main-es5.605a44081c3211fa9aa3.js",
+        "/torneoacg/main-es2015.6d9717c9fec1ea09fb6b.js",
+        "/torneoacg/main-es5.6d9717c9fec1ea09fb6b.js",
         "/torneoacg/manifest.webmanifest",
         "/torneoacg/polyfills-es2015.2987770fde9daa1d8a2e.js",
         "/torneoacg/polyfills-es5.df1101cc1e7b588877f8.js",
         "/torneoacg/runtime-es2015.edb2fcf2778e7bf1d426.js",
         "/torneoacg/runtime-es5.edb2fcf2778e7bf1d426.js",
-        "/torneoacg/styles.410492626c69ff8d6a1d.css"
+        "/torneoacg/styles.6806461e5847ee88a084.css"
       ],
       "patterns": []
     },
@@ -28,6 +28,7 @@
       "urls": [
         "/torneoacg/assets/.sass-cache/8d61abc22fb94e381cfed6f7bfbe3b9cb00a3ca6/candy-app-theme.scssc",
         "/torneoacg/assets/.sass-cache/8d61abc22fb94e381cfed6f7bfbe3b9cb00a3ca6/torneo-theme.scssc",
+        "/torneoacg/assets/campo.svg",
         "/torneoacg/assets/draw.svg",
         "/torneoacg/assets/icons/android-icon-144x144.png",
         "/torneoacg/assets/icons/android-icon-192x192.png",
@@ -75,8 +76,9 @@
   "dataGroups": [],
   "hashTable": {
     "/torneoacg/assets/.sass-cache/8d61abc22fb94e381cfed6f7bfbe3b9cb00a3ca6/candy-app-theme.scssc": "c4ce1570142ed3162d019d97b0b8bc94ba6f0aea",
-    "/torneoacg/assets/.sass-cache/8d61abc22fb94e381cfed6f7bfbe3b9cb00a3ca6/torneo-theme.scssc": "db53eef5e32f24d1a1c646eb88636219c35479f5",
-    "/torneoacg/assets/draw.svg": "60d87ab70ae6c63804a7539d0fb01b6296688fcf",
+    "/torneoacg/assets/.sass-cache/8d61abc22fb94e381cfed6f7bfbe3b9cb00a3ca6/torneo-theme.scssc": "394f6b51b52a5d6bbab9418cc006476d07c61da7",
+    "/torneoacg/assets/campo.svg": "efa860aa78e17d4b669ce2d1e61cbc3557d1b80d",
+    "/torneoacg/assets/draw.svg": "80c88658a0fff6f3f400cd8041096bc56cc5e6c6",
     "/torneoacg/assets/icons/android-icon-144x144.png": "0dc1647d70f6078a69f82094e8fa353852739dfc",
     "/torneoacg/assets/icons/android-icon-192x192.png": "85ddd9f3503fa18d916b94fcb282df0b0d153258",
     "/torneoacg/assets/icons/android-icon-36x36.png": "7818343a7d4b7b69da6f831312f129c903b2c147",
@@ -111,21 +113,21 @@
     "/torneoacg/assets/icons/ms-icon-70x70.png": "45c7ba25a7b8005fc53644ff7bbd5d11035c3381",
     "/torneoacg/assets/logo.png": "a195df3239f186e434976305822196e36896c42f",
     "/torneoacg/assets/logo_bianco.png": "5302febf32476b97c583174624edb589afd567ef",
-    "/torneoacg/assets/lose.svg": "e9b42fc920a4e04d65aefde24f75c3148962d38f",
-    "/torneoacg/assets/null.svg": "67f37aa2e38bd34f9318d7e3cdd52aee08808967",
-    "/torneoacg/assets/torneo-theme.css": "b4c3c74c59591ed2dfbbfb965c406da6ffa0eb4c",
-    "/torneoacg/assets/torneo-theme.scss": "3b721e1130724f8a9e360ef8036f903ea36b16eb",
-    "/torneoacg/assets/win.svg": "7f34eb87e3f2b2a1e6fca7aa53a4fbad9a44aa36",
+    "/torneoacg/assets/lose.svg": "5048b66debb500e4611f311f036d69706db04417",
+    "/torneoacg/assets/null.svg": "f9eeffef2b0cd01d66cfe813df06eff2428ba003",
+    "/torneoacg/assets/torneo-theme.css": "69fd7264760d794ed07308420e70d53fd1f0079d",
+    "/torneoacg/assets/torneo-theme.scss": "053c2424ac20204a596978f23e5a397280f70ead",
+    "/torneoacg/assets/win.svg": "4e9599355704198ffdc7c31a6fd7c527785e0ff5",
     "/torneoacg/favicon.ico": "7ceb896641d53c4ba195baf9075ae88e07fbbd4d",
-    "/torneoacg/index.html": "c60ddd6f41c42a13cad6e49d0fd8791df88d0bcc",
-    "/torneoacg/main-es2015.605a44081c3211fa9aa3.js": "b77bb5414fbe79c67ed2ac66cb48eec3e0d22f25",
-    "/torneoacg/main-es5.605a44081c3211fa9aa3.js": "66397da774a49ba21a1369df52cda98bac5a2462",
-    "/torneoacg/manifest.webmanifest": "de227435d323ab8b38ae088e88466bb8b7de0d51",
+    "/torneoacg/index.html": "f178dd5ed6362341e28f2d03058d059ab0d7f03d",
+    "/torneoacg/main-es2015.6d9717c9fec1ea09fb6b.js": "54bbe1e38f2ac725fa82ce632b2c6a3f6ff14133",
+    "/torneoacg/main-es5.6d9717c9fec1ea09fb6b.js": "23943d290bc29072c167bee999b530b2c6363e8a",
+    "/torneoacg/manifest.webmanifest": "5e400d4145727b9e84e554317381ee93c646dac5",
     "/torneoacg/polyfills-es2015.2987770fde9daa1d8a2e.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
     "/torneoacg/polyfills-es5.df1101cc1e7b588877f8.js": "c1b326602e7b72c79de60cd3c2fd8f60a97bf078",
     "/torneoacg/runtime-es2015.edb2fcf2778e7bf1d426.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/torneoacg/runtime-es5.edb2fcf2778e7bf1d426.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/torneoacg/styles.410492626c69ff8d6a1d.css": "21ff07d9da32c474010405e8372f0fb6576366d2"
+    "/torneoacg/styles.6806461e5847ee88a084.css": "21ff07d9da32c474010405e8372f0fb6576366d2"
   },
   "navigationUrls": [
     {
