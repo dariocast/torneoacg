@@ -1,1 +1,131 @@
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Home">
 
+  </mat-tab>
+  <mat-tab label="Regolamento">
+    <ng-template matTabContent>
+      <h1 class="mat-display-2">Regolamento FantaCentro'League</h1>
+      <ul>
+        <li><b>Premessa:</b> La formazione va inserita di settimana in settimana e può comprendere qualunque claciatore del fantacaclio. Solo chi EFFETTIVAMENTE giocherà le 4/5 partite del pomeriggio ricevera voto. Tutti gli animatori ricevono voto, a prescindere da se giocano o meno</li>
+        <li><b>Regole di Gioco</b>
+          <ul>
+            <li>
+              Ogni partecipante ha a disposizione 150 fantacrediti e deve acquistare 10 calciatori/calciatrici.
+            </li>
+            <li>
+              Ogni rosa deve essere composta da: 2 portieri P, 4 difensori D, 4 attaccanti A.
+            </li>
+            <li>
+              Ogni rosa deve contenere un minimo di 2 calciatrici, di cui una va obbligatoriamente schierata titolare. Ogni rosa deve contenere un minimo di 1 animatore maschio o femmina a discrezione del fantallenatore.
+            </li>
+            <li>
+              I moduli consentiti sono: 1-2-2 (P-D-D-A-A) e 1-3-1 (P-D-D-D-A). <br>
+              Le calciatrici non hanno ruolo specifico e possono essere schierate indistintamente come D o come A.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Sostituzioni</b> <br>
+          Nel caso in cui uno o più calciatori non ricevano un punteggio di gioco in quella giornata (per mancata partecipazione alla partita) subentreranno i calciatori schierati in panchina secondo l'ordine scelto dal fantallenatore e rispettando i ruoli (D sostituisce un altro D e così via...)
+          <br> NB: Una calciatrice deve essere sostituita con un'altra calciatrice. La panchina sarà composta da tutti i calciatori non schierati nella formazione di partenza
+        </li>
+        <li>
+          <b>Punteggi</b><br>
+          Ogni calciatore che fa il suo ingresso sul manto erboso ed è a referto sul quaferno indipendentemente dai minuti giocati riceverà un punteggio che è somma di <b>Base</b> e <b>Bonus/Malus</b>
+          <ul>
+            <li>
+              La <b>base</b> parte da:
+              <ul>
+                <li>
+                  3 punti se la squadra di appartenenza del giocatore perde con 5 gol di scarto o più
+                </li>
+                <li>
+                  3,5 punti se la squadra di appartenenza del giocatore perde con da 1 a 4 gol di scarto
+                </li>
+                <li>
+                  4 punti se la squadra di appartenenza del giocatore pareggia
+                </li>
+                <li>
+                  4,5 punti se la squadra di appartenenza del giocatore vince con da 1 a 4 gol di scarto
+                </li>
+                <li>
+                  5 punti se la squadra di appartenenza del giocatore vince con 5 gol di scarto o più
+                </li>
+              </ul>
+            </li>
+            <li>
+              Alla base vanno sommati <b>bonus e malus</b>:
+              <ul>
+                <li>
+                  +2 per ogni gol segnato dal calciatore
+                </li>
+                <li>
+                  -2 per ammonizione
+                </li>
+                <li>
+                  -3 per cartellino nero
+                </li>
+                <li>
+                  -4 per espulsione
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Portiere</b><br>
+          Distinguiamo:
+          <ul>
+            <li>
+              Portieri che hanno solo P: <br>
+              Può essere schierato solo in porta nella fantaformazione e subisce tutti i gol presi dal gruppo (anche se poi giocherà avanti e indipendentemente da chi effettivamente giocherà la gara in porta).
+            </li>
+            <li>
+              Portieri con doppio ruolo (P/D o P/A o P/D/A): <br>
+              Se il portiere viene schierato nella fantaformazione come P, come nel caso precedente, subisce come malus tutti i gol presi dal gruppo (anche se poi giocherà avanti e indipendentemente da chi effettivamente giocherà la gara in porta). <br>
+              Se invece viene schierato come D o A nella fantaformazione, non sarà soggetto ai malus dei gol subiti.
+            </li>
+          </ul>
+          Il malus del portiere per ogni gol subito è -1
+        </li>
+        <li>
+          Gli altri giocatori di movimento, D e A, che dovessero trovarsi impegnati tra i pali, nel caso di gol subiti non saranno soggetti a malus, malus che, invece, saranno sempre attribuiti al giocatore di ruolo P del gruppo.
+        </li>
+        <li>
+          <b>Punteggio e Classifica</b><br>
+          Ogni giornata verranno sommati i punti dei giocatori schierati come titolari, con le opportune ed eventuali sostituzioni, e saranno sommati al punteggio generale della vostra fantasquadra
+        </li>
+      </ul>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Quotazioni">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z6" matSort (matSortChange)="sortData($event)">
+        <ng-container matColumnDef="nome">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+          <td mat-cell *matCellDef="let giocatore"> {{giocatore.nome}} </td>
+        </ng-container>
+        <ng-container matColumnDef="gruppo">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Gruppo </th>
+          <td mat-cell *matCellDef="let giocatore"> {{giocatore.gruppo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="ruolo">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Ruolo </th>
+          <td mat-cell *matCellDef="let giocatore"> {{giocatore.ruolo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="costo">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Costo </th>
+          <td mat-cell *matCellDef="let giocatore"> {{giocatore.costo}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    <div style="z-index:5; position : fixed;display : flex; align-self : flex-end;bottom : 10%; margin-bottom : 68px;right: 10%;">
+      <a mat-mini-fab (click)="loadGiocatori()" style="margin-right : 14px;"><mat-icon>change</mat-icon></a>
+    </div>
+  </mat-tab>
+  <mat-tab label="Formazioni">
+  </mat-tab>
+  <mat-tab label="Schiera">
+
+  </mat-tab>
+</mat-tab-group>

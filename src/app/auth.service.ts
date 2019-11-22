@@ -7,7 +7,7 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import {User} from './models/user.model';
+import {User} from './models/user';
 import {MatSnackBar} from '@angular/material';
 
 @Injectable({ providedIn: 'root' })
@@ -52,14 +52,13 @@ export class AuthService {
           const userData = docSnapshot.data;
           return docSnapshot.data;
         } else {
-          this.openSnackBar('Utente non abilitato!', 'OK');
-          return this.signOut();
           const data = {
             uid: user.uid,
             email: user.email,
             displayName: user.displayName,
             photoURL: user.photoURL,
-            isAdmin: false
+            isAdmin: false,
+            fantasquadra: ''
           };
           return userRef.set(data, { merge: true });
         }

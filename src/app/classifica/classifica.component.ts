@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
-import {Squadra} from '../models/squadra.model';
+import {Squadra} from '../models/squadra';
 import {Observable} from 'rxjs';
 import {DataSource} from '@angular/cdk/table';
 

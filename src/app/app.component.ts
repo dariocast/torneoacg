@@ -13,8 +13,7 @@ export class AppComponent {
     { label: 'Notizie', path: '/notizie' },
     { label: 'Classifica', path: '/classifica' },
     { label: 'Statistiche', path: '/statistiche' },
-    { label: 'Squadre', path: '/squadre' },
-    { label: 'Gioca al Fanta!', path: '/dashboard' }
+    { label: 'Squadre', path: '/squadre' }
   ];
 
   constructor(public auth: AuthService) {
